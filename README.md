@@ -43,7 +43,7 @@ Godot(GDScript)로 만드는 모바일 아이들(Idle) 클리커/타이쿤 게�
 2) 이 프로젝트 폴더를 Godot Project Manager에서 열기
 3) Main Scene 실행 (Play)
 
-> v0.1 단계에서는 에셋이 placeholder일 수 있습니다.
+> v0.1 단계에서는 에셋이 placeholder일 수 있습니다. (현재 기본 UI 에셋 연결 완료)
 
 ---
 
@@ -75,4 +75,6 @@ APK(설치 테스트) → AAB(Play 배포 형태) 순으로 준비할 예정입�
 
 ---
 
-## C
+## Current Status
+
+- v0.1 플레이 가능: 탭으로 골드 증가, 기본 UI 에셋 연결 완료.

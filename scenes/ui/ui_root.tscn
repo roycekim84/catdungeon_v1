@@ -1,0 +1,111 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/ui_root.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_gold.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_catnip.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_ticket.png" id="4"]
+[ext_resource type="Texture2D" path="res://assets/ui/tap_button_catpaw.png" id="5"]
+[ext_resource type="Texture2D" path="res://assets/ui/tabs/tab_upgrades.png" id="6"]
+[ext_resource type="Texture2D" path="res://assets/ui/tabs/tab_dungeon.png" id="7"]
+[ext_resource type="Texture2D" path="res://assets/ui/tabs/tab_map.png" id="8"]
+[ext_resource type="Texture2D" path="res://assets/ui/tabs/tab_shop.png" id="9"]
+
+[node name="UIRoot" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1")
+
+[node name="Layout" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TopBar" type="HBoxContainer" parent="Layout"]
+custom_minimum_size = Vector2(0, 96)
+size_flags_horizontal = 3
+theme_override_constants/separation = 24
+
+[node name="GoldBox" type="HBoxContainer" parent="Layout/TopBar"]
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="GoldIcon" type="TextureRect" parent="Layout/TopBar/GoldBox"]
+custom_minimum_size = Vector2(40, 40)
+texture = ExtResource("2")
+stretch_mode = 5
+
+[node name="GoldLabel" type="Label" parent="Layout/TopBar/GoldBox"]
+text = "Gold"
+
+[node name="GoldValueLabel" type="Label" parent="Layout/TopBar/GoldBox"]
+text = "0"
+
+[node name="CatnipBox" type="HBoxContainer" parent="Layout/TopBar"]
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="CatnipIcon" type="TextureRect" parent="Layout/TopBar/CatnipBox"]
+custom_minimum_size = Vector2(40, 40)
+texture = ExtResource("3")
+stretch_mode = 5
+
+[node name="CatnipLabel" type="Label" parent="Layout/TopBar/CatnipBox"]
+text = "Catnip"
+
+[node name="CatnipValueLabel" type="Label" parent="Layout/TopBar/CatnipBox"]
+text = "0"
+
+[node name="TicketBox" type="HBoxContainer" parent="Layout/TopBar"]
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="TicketIcon" type="TextureRect" parent="Layout/TopBar/TicketBox"]
+custom_minimum_size = Vector2(40, 40)
+texture = ExtResource("4")
+stretch_mode = 5
+
+[node name="TicketLabel" type="Label" parent="Layout/TopBar/TicketBox"]
+text = "Ticket"
+
+[node name="TicketValueLabel" type="Label" parent="Layout/TopBar/TicketBox"]
+text = "0"
+
+[node name="Center" type="CenterContainer" parent="Layout"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TapButton" type="TextureButton" parent="Layout/Center"]
+custom_minimum_size = Vector2(320, 320)
+texture_normal = ExtResource("5")
+stretch_mode = 5
+
+[node name="BottomTabBar" type="HBoxContainer" parent="Layout"]
+custom_minimum_size = Vector2(0, 128)
+size_flags_horizontal = 3
+alignment = 1
+theme_override_constants/separation = 24
+
+[node name="UpgradesButton" type="TextureButton" parent="Layout/BottomTabBar"]
+custom_minimum_size = Vector2(96, 96)
+size_flags_horizontal = 3
+texture_normal = ExtResource("6")
+stretch_mode = 5
+
+[node name="DungeonButton" type="TextureButton" parent="Layout/BottomTabBar"]
+custom_minimum_size = Vector2(96, 96)
+size_flags_horizontal = 3
+texture_normal = ExtResource("7")
+stretch_mode = 5
+
+[node name="MapButton" type="TextureButton" parent="Layout/BottomTabBar"]
+custom_minimum_size = Vector2(96, 96)
+size_flags_horizontal = 3
+texture_normal = ExtResource("8")
+stretch_mode = 5
+
+[node name="ShopButton" type="TextureButton" parent="Layout/BottomTabBar"]
+custom_minimum_size = Vector2(96, 96)
+size_flags_horizontal = 3
+texture_normal = ExtResource("9")
+stretch_mode = 5
